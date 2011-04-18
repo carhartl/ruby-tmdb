@@ -49,7 +49,7 @@ class Tmdb
       uri.query_values = query_values
       params = '?' + uri.query
     elsif not data.nil?
-      params = '/' + CGI::escape(data.to_s)
+      params = '/' + URI.escape(data.to_s)
     else
       params = ''  
     end
